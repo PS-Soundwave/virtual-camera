@@ -359,13 +359,13 @@ HRESULT CVirtualCameraPin::GetFormat(AM_MEDIA_TYPE **ppmt) {
     *ppmt = CreateMediaType(&mediaType);
 
     return S_OK;
-};
+}
 
 HRESULT CVirtualCameraPin::GetNumberOfCapabilities(int *piCount, int *piSize) {
     *piCount = 1;
     *piSize = sizeof(VIDEO_STREAM_CONFIG_CAPS);
     return S_OK;
-};
+}
 
 HRESULT CVirtualCameraPin::GetStreamCaps(int iIndex, AM_MEDIA_TYPE **pmt, BYTE *pSCC) {
     CMediaType mediaType;

@@ -59,7 +59,6 @@ private:
 
     std::array<uint8_t, FRAME_WIDTH * FRAME_HEIGHT * DEPTH> frame{};
     REFERENCE_TIME now = 0;
-    IFilterGraph* (*getGraph)();
 };
 
 #endif
