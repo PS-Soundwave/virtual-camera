@@ -8,7 +8,8 @@ CVirtualCameraPin::CVirtualCameraPin(TCHAR *pObjectName, HRESULT *phr, CSource *
     // Color bars divided into 5 segments, with the top segment having 100% alpha, with the alpha decreasing by 25%
     // each segment going down.
     // Colors are full-scale RGB. +I color probably isn't even close to right.
-    // Pixels are ARGB (NB: The documentation is big-endian!)
+    // Pixels are RGBA (NB: The documentation appears to either be incorrect or not observed by consumers)
+    // Pixels are ordered bottom-up within the frame.
 
     // Pattern 1
     for (int a = 0; a < 5; a++) {
