@@ -52,12 +52,12 @@ private:
     static constexpr long FRAME_WIDTH = 1920;
     static constexpr long FRAME_HEIGHT = 1080;
     static constexpr long FRAME_SIZE = FRAME_HEIGHT * FRAME_WIDTH * DEPTH;
-    static constexpr long FPS = 5;
-    static constexpr long BITRATE = FRAME_SIZE * FPS * DEPTH * 8;
+    static constexpr long FPS = 30;
+    static constexpr long BITRATE = FRAME_SIZE * FPS * 8;
     static constexpr long FRAME_TIME = 166667; // Frame length in 100s of nanoseconds (60fps)
     static constexpr long RESOLUTION = 12000; // Shouldn't matter. Photo quality.
 
-    std::array<uint8_t, FRAME_WIDTH * FRAME_HEIGHT * DEPTH> frame{};
+    std::array<uint8_t, FRAME_SIZE> frame{};
     REFERENCE_TIME now = 0;
 };
 
